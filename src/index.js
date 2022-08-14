@@ -1,1 +1,58 @@
 import "./index.css";
+
+initBody();
+
+function initBody() {
+    const sidebar = initSidebar();
+
+    document.body.appendChild(sidebar);
+}
+
+function initSidebar() {
+
+    const options = document.createElement("form");
+    options.classList.add("sidebar");
+
+    options.appendChild(
+        initSidebarItem("home", "Home", "", "restarant logo")
+    );
+    options.appendChild(
+        initSidebarItem("menu", "Menu", "", "picture of food")
+    );
+    options.appendChild(
+        initSidebarItem("contact", "Contact", "", "picture of contact")
+    );
+
+    return options;
+}
+
+function initSidebarItem(id, content, imgSrc, imgAlt) {
+    
+    const img = document.createElement("img");
+    img.classList.add("sidebar-image");
+    img.src = imgSrc;
+    img.alt = imgAlt;
+    
+    const text = document.createElement("p");
+    text.classList.add("sidebar-content");
+    text.textContent = content;
+    
+    const label = document.createElement("label");
+    label.classList.add("sidebar-label");
+    label.htmlFor = id;
+    label.appendChild(img);
+    label.appendChild(text);
+
+    const input = document.createElement("input");
+    input.classList.add("sidebar-input");
+    input.type = "radio";
+    input.id = id;
+    input.name = "sidebar-item";
+
+    const item = document.createElement("p");
+    item.classList.add("sidebar-item");
+    item.appendChild(input);
+    item.appendChild(label);
+
+    return item;
+}
