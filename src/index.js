@@ -13,8 +13,10 @@ function initSidebar() {
     const options = document.createElement("form");
     options.classList.add("sidebar");
 
+    const homeOption = initSidebarItem("home", "Home", "", "restarant logo");
+    homeOption.querySelector(".sidebar-input").checked = true;
     options.appendChild(
-        initSidebarItem("home", "Home", "", "restarant logo")
+        homeOption
     );
     options.appendChild(
         initSidebarItem("menu", "Menu", "", "picture of food")
