@@ -1,13 +1,13 @@
-const path = requre('path');
-const HtmlWebpackPlugin = requre('html-webpack-plugin');
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     mode: 'development',
     entry: {
-        index: './src/index.js'
+        index: './src/index.js',
     },
     devtool: 'inline-source-map',
-    devserver: {
+    devServer: {
         static: './dist',
     },
     plugins: [
@@ -32,7 +32,7 @@ module.exports = {
             },
         ],
     },
-    optimatization: {
+    optimization: {
         runtimeChunk: 'single',
     },
-}
+};
