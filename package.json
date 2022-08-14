@@ -1,0 +1,29 @@
+{
+  "name": "restaurant-homepage",
+  "version": "1.0.0",
+  "description": "A sample resteraunt homepage created with npm and webpack.",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Risheit/restaurant-homepage.git"
+  },
+  "author": "Risheit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Risheit/restaurant-homepage/issues"
+  },
+  "homepage": "https://github.com/Risheit/restaurant-homepage#readme",
+  "devDependencies": {
+    "css-loader": "^6.7.1",
+    "html-webpack-plugin": "^5.5.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.10.0"
+  }
+}
