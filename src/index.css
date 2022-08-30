@@ -69,3 +69,8 @@ input[type="radio"]:checked+label {
     margin: 0px;
     font-size: 1.3rem;
 }
+
+/* Main */
+main {
+    padding: 2rem;
+}
